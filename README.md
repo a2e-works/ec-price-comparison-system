@@ -78,8 +78,6 @@ sample/
 README.md
 ```
 
----
-
 # 公開範囲（Notice）
 
 本リポジトリはポートフォリオ公開用です。
@@ -89,7 +87,33 @@ README.md
 一部コードはデモ用に再構成しています。
 
 ---
+## Demo
 
+### Input
+
+sample/sample_input.csv
+
+↓
+
+### Process
+
+demo/price_comparison_demo.py
+
+↓
+
+### Output
+
+sample/sample_output.xlsx
+
+このリポジトリでは、実際の運用システムを簡略化したデモ版を公開しています。
+
+## Repository Structure
+
+```
+demo/
+sample/
+README.md
+```
 # 今後の予定（Future）
 
 - Demoコードの追加
