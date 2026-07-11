@@ -138,6 +138,8 @@ Generated Excel report:
 ```text
 sample/sample_output.xlsx
 ```
+Sheet:
+Profit Analysis
 
 Features:
 
