@@ -70,7 +70,9 @@ print("[Python] Retrieving marketplace prices...")
 for _, row in df.iterrows():
 
     jan = row["JAN"]
-    print(f"  Processing JAN: {jan}")
+    product = row["Product"]
+
+    print(f"  {product} ({jan})")
 
     amazon = get_amazon_price(jan)
     rakuten = get_rakuten_price(jan)
