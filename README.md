@@ -21,7 +21,19 @@ EC運営では、以下のような作業が日常的に発生します。
 業務改善デモとして開発しました。
 
 ---
+## Screenshots
 
+### Input CSV
+
+![Input CSV](screenshots/01_input_csv.png)
+
+### Demo Execution
+
+![Demo Execution](screenshots/02_demo_execution.png)
+
+### Profit Analysis
+
+![Profit Analysis](screenshots/03_profit_analysis.png)
 ## Features
 
 ### CSV商品リスト入力
