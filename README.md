@@ -33,7 +33,7 @@ EC運営では、以下のような作業が日常的に発生します。
 
 ### Profit Analysis
 
-![Profit Analysis](screenshots/03_profit_analysis.png)
+![Profit Analysis](screenshots/03_output_csv.png)
 ## Features
 
 ### CSV商品リスト入力
