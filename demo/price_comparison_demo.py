@@ -56,13 +56,21 @@ def calculate_profit_rate(sell_price, buy_price):
 # Main Process
 # ----------------------------------
 
+print("[Python] Loading sample CSV...")
+
 df = pd.read_csv("../sample/sample_input.csv", dtype=str)
 
+print(f"[Python] {len(df)} products loaded.")
+print()
+
 results = []
+
+print("[Python] Retrieving marketplace prices...")
 
 for _, row in df.iterrows():
 
     jan = row["JAN"]
+    print(f"  Processing JAN: {jan}")
 
     amazon = get_amazon_price(jan)
     rakuten = get_rakuten_price(jan)
@@ -92,9 +100,14 @@ for _, row in df.iterrows():
 
 output = pd.DataFrame(results)
 
+print()
+print("[Python] Writing Excel report...")
+
 output.to_excel(
     "../sample/sample_output.xlsx",
     index=False
 )
 
-print("Done.")
+print("[Python] Completed successfully!")
+print("[Python] Output: sample/sample_output.xlsx")
+
