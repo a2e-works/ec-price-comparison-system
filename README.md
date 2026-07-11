@@ -21,6 +21,14 @@ EC運営では、以下のような作業が日常的に発生します。
 業務改善デモとして開発しました。
 
 ---
+## Demo
+
+Windows:
+Run Demo.bat
+
+Output:
+sample/sample_output.xlsx
+
 ## Screenshots
 
 ### Input CSV
