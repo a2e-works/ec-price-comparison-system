@@ -1,135 +1,167 @@
-# EC Price Comparison System
+# EC Profit Analyzer
 
-Amazon・楽天市場・Yahoo!ショッピングの価格情報を比較し、
-EC運営における商品リサーチと仕入れ判断を支援する業務改善システムです。
+Pythonで作成した、EC運営向けの価格比較・利益分析デモツールです。
 
----
-
-# 概要（Overview）
-
-本システムは、EC運営における価格比較・利益計算・商品リサーチ業務を効率化するために開発しました。
-
-従来は複数のECサイトを巡回し、価格をExcelへ転記して利益計算を行っていましたが、商品数の増加に伴い手作業での運用が困難になりました。
-
-そこでPythonを用いて価格取得から利益計算までを自動化し、既存のExcel運用を活かしたまま業務効率化を実現しました。
-
-本リポジトリはポートフォリオ公開用に再構成したデモ版です。
+商品情報をCSVで入力すると、複数ショップの価格比較を行い、
+推定仕入価格と利益率をExcelレポートとして出力します。
 
 ---
 
-# 主な機能（Features）
+## Overview
 
-- Amazon価格取得
-- 楽天市場価格取得
-- Yahoo!ショッピング価格取得
-- 商品情報取得
-- 利益計算
-- Excelレポート出力
-- 商品候補の抽出支援
+EC運営では、以下のような作業が日常的に発生します。
 
----
+* 商品情報の整理
+* 複数サイトの価格確認
+* 仕入判断
+* 利益計算
+* Excelへの転記
 
-# 業務フロー（Workflow）
-
-商品リスト（Keepa・卸CSV・JAN一覧）
-
-↓
-
-Pythonによるデータ処理
-
-↓
-
-Amazon・楽天市場・Yahoo!ショッピングから価格取得
-
-↓
-
-価格比較・利益計算
-
-↓
-
-Excelへ結果出力
-
-↓
-
-フィルター・ソート
-
-↓
-
-仕入れ判断
+本ツールは、このような繰り返し作業をPythonで自動化する
+業務改善デモとして開発しました。
 
 ---
 
-# 技術構成（Technology）
+## Features
 
-- Python
-- Excel
-- CSV
-- REST API
-- openpyxl
+### CSV商品リスト入力
+
+商品情報をCSV形式で読み込みます。
+
+Example:
+
+```csv
+JAN,Product
+490000000001,USB-Cケーブル
+490000000002,モバイルバッテリー
+490000000003,LEDライト
+```
 
 ---
 
-# ディレクトリ構成（Repository Structure）
+### Price Comparison
+
+複数ショップの価格を比較します。
+
+Demo data:
+
+* Amazon
+* Rakuten
+* Yahoo
+
+---
+
+### Profit Analysis
+
+最安仕入価格を算出し、利益率を計算します。
+
+Calculation:
 
 ```text
-demo/
-sample/
-README.md
+Profit Rate =
+(Selling Price - Purchase Price)
+/
+Purchase Price
+× 100
 ```
 
-# 公開範囲（Notice）
-
-本リポジトリはポートフォリオ公開用です。
-
-実際の運用コード・APIキー・業務データ・利益判定ロジックなどは公開していません。
-
-一部コードはデモ用に再構成しています。
-
 ---
-## Demo
 
-### Input
+### Excel Report Generation
 
-sample/sample_input.csv
+分析結果をExcelファイルとして出力します。
 
-↓
+Output:
 
-### Process
-
-demo/price_comparison_demo.py
-
-↓
-
-### Output
-
+```text
 sample/sample_output.xlsx
-
-このリポジトリでは、実際の運用システムを簡略化したデモ版を公開しています。
-
-## Repository Structure
-
 ```
-demo/
-sample/
-README.md
-```
-# 今後の予定（Future）
 
-システム構成図追加
+Included:
 
-スクリーンショット追加
-
-UIイメージ追加
-
-運用フロー図追加
-
+* Price comparison
+* Cheapest purchase price
+* Profit rate
 
 ---
 
-# 作者（Author）
+## Demo Execution
 
-**A2E Works**
+Windows環境では、
 
-Field Tech Engineer
+```text
+Run Demo.bat
+```
 
-現場の知恵を、仕組みとして残す。
+を実行してください。
+
+処理内容:
+
+```text
+CSV Input
+
+↓
+
+Python Processing
+
+↓
+
+Price Comparison
+
+↓
+
+Profit Calculation
+
+↓
+
+Excel Report
+```
+
+---
+
+## Demo Output
+
+Generated Excel report:
+
+```text
+Profit Analysis
+```
+
+Features:
+
+* Header freeze
+* Auto filter
+* Number formatting
+* Business-friendly layout
+
+---
+
+## Technology
+
+* Python 3
+* pandas
+* openpyxl
+
+---
+
+## Note
+
+This repository contains a simplified demonstration version.
+
+The production version can be extended with:
+
+* API integration
+* Database connection
+* Business-specific rules
+* Additional automation workflows
+
+---
+
+## Background
+
+This project was created based on practical experience with
+EC operations and repetitive business workflows.
+
+The objective is not only software development,
+but also understanding existing operations and improving them
+without changing the user's current workflow.
