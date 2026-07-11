@@ -136,7 +136,7 @@ Excel Report
 Generated Excel report:
 
 ```text
-Profit Analysis
+sample/sample_output.xlsx
 ```
 
 Features:
