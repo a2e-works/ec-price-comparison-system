@@ -6,7 +6,27 @@ Pythonで作成した、EC運営向けの価格比較・利益分析デモツー
 推定仕入価格と利益率をExcelレポートとして出力します。
 
 ---
+## Quick Start
 
+このデモは Windows 環境で動作します。
+
+### 1. ダウンロード
+
+GitHub の **Code** ボタンから **Download ZIP** を選択し、ZIPファイルを展開します。
+
+### 2. デモ実行
+
+`Run Demo.bat`
+
+をダブルクリックしてください。
+
+### 3. 実行結果
+
+処理が完了すると、以下のExcelファイルが生成されます。
+
+```
+sample/sample_output.xlsx
+```
 ## Overview
 
 EC運営では、以下のような作業が日常的に発生します。
@@ -21,13 +41,6 @@ EC運営では、以下のような作業が日常的に発生します。
 業務改善デモとして開発しました。
 
 ---
-## Demo
-
-Windows:
-Run Demo.bat
-
-Output:
-sample/sample_output.xlsx
 
 ## Screenshots
 
@@ -42,6 +55,7 @@ sample/sample_output.xlsx
 ### Profit Analysis
 
 ![Profit Analysis](screenshots/03_output_csv.png)
+
 ## Features
 
 ### CSV商品リスト入力
@@ -107,13 +121,15 @@ Included:
 
 ## Demo Execution
 
-Windows環境では、
+Windows環境で動作確認できます。
 
-```text
-Run Demo.bat
-```
+1. GitHubの **Code** ボタンから **Download ZIP** を選択します。
 
-を実行してください。
+2. ダウンロードしたZIPファイルを展開します。
+
+3. フォルダ内の `Run Demo.bat` をダブルクリックします。
+
+4. 処理完了後、`sample/sample_output.xlsx` が生成されます。
 
 処理内容:
 
@@ -137,27 +153,6 @@ Profit Calculation
 Excel Report
 ```
 
----
-
-## Demo Output
-
-Generated Excel report:
-
-```text
-sample/sample_output.xlsx
-```
-Sheet:
-Profit Analysis
-
-Features:
-
-* Header freeze
-* Auto filter
-* Number formatting
-* Business-friendly layout
-
----
-
 ## Technology
 
 * Python 3
@@ -165,6 +160,19 @@ Features:
 * openpyxl
 
 ---
+
+
+## Requirements
+
+- Windows 10 / 11
+- Python 3.x
+- Required packages: pandas, openpyxl
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
 
 ## Note
 
@@ -178,20 +186,17 @@ The production version can be extended with:
 * Additional automation workflows
 
 ---
-
 ## Background
 
-This project was created based on practical experience with
-EC operations and repetitive business workflows.
+このツールは、EC運営業務で実際に行っていた価格調査・利益分析業務をもとに、
+ポートフォリオ向けに再構成したデモ版です。
 
-The objective is not only software development,
-but also understanding existing operations and improving them
-without changing the user's current workflow.
-
+業務改善では、新しいシステムを導入することよりも、
+現場の運用を理解し、無理なく改善できる仕組みづくりを重視しています。
 
 ---
 
-<p align="center">
-  A2E Works
-Practical automation tools for real-world workflows.
-</p>
+**A2E Works**
+
+*Practical automation tools for real-world workflows.*
+
